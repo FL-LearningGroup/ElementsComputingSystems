@@ -1,0 +1,25 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/02/IsNeg16.hdl
+
+/******************************
+    **Writer: LucasYao
+    **Date: 2020/07/03
+    **Changed History:
+        1. init
+*******************************/
+
+/**
+ * IsNeg16 gate:
+ * if in[15] == 1 then out = 0 otherwise
+ */
+
+CHIP IsNeg16 {
+    IN in[16];
+    OUT out;
+
+    PARTS:
+    // Put your code here:
+    Or(a = in[15], b = false, out = out);
+}
