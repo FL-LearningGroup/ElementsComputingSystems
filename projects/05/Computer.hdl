@@ -3,6 +3,13 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/05/Computer.hdl
 
+/******************************
+    **Writer: LucasYao
+    **Date: 2020/07/14
+    **Changed History:
+        1. init
+*******************************/
+
 /**
  * The HACK computer, including CPU, ROM and RAM.
  * When reset is 0, the program stored in the computer's ROM executes.
@@ -20,4 +27,8 @@ CHIP Computer {
 
     PARTS:
     // Put your code here:
+    ROM32K(address=pc, out=instruction);
+    CPU(inM=memOut, instruction=instruction, reset=reset, outM=outM, 
+        writeM=writeM, addressM=addressM, pc=pc);
+    Memory(in=outM, load=writeM, address=addressM, out=memOut);
 }
