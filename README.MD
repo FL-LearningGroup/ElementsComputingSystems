@@ -11,4 +11,5 @@
 + ### [Lab tests of Book WebSite](https://www.nand2tetris.org/book)
 + ### [知乎相关的文章](https://zhuanlan.zhihu.com/p/119466344)
 
-
+## Completed
+Skip the chapters after chapter 8.
